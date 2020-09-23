@@ -1,0 +1,112 @@
+ #logo{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+
+ .tag-line{
+     position: absolute;
+     top: 60%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: transparent;
+     letter-spacing: 3px;
+     text-transform: uppercase;
+     font-family: 'Abel', sans-serif;
+     animation: fill 2s ease forwards .6s;
+
+ }
+ .wave-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    top: 70;
+
+ }
+ .wave{
+     position: absolute;
+     height: 2000px;
+     width: 2000px;
+     border-radius: 37%;
+     opacity: .6;
+    top: -200px;
+     left: -100px;
+     background: linear-gradient(230deg, #5c3d6b, #214b99, #357175);
+     animation: wave 10s infinite linear ;
+ }
+ .wave:nth-child(2){
+     left: -300px;
+    animation-delay: .2s;
+
+}
+.wave:nth-child(3){
+   animation-delay: .3s;
+   left: -200px;
+
+}
+ @keyframes wave{
+    0% {
+        background-position: 0% 50%;
+      }
+    
+      50% {
+        background-position: 100% 50%;
+      }
+    
+      100% {
+        background-position: 0% 50%;
+      }
+     from{
+        transform: rotate(0deg);
+     }
+     to{
+        transform: rotate(360deg);
+     }
+ }
+
+
+
+
+
+ #logo path:nth-child(1){
+    stroke-dasharray: 780px;
+    stroke-dashoffset: 780px;
+    animation: stroke-animate-green 2s ease-in-out forwards .3s;
+   
+ }
+ #logo path:nth-child(2){
+    stroke-dasharray: 800px;
+    stroke-dashoffset: 800px;
+    animation: stroke-animate 3s  ease-in-out forwards .4s;
+}
+
+
+@keyframes stroke-animate{
+    from{
+        fill: transparent;
+    }
+    to{
+        stroke-dashoffset: 0;
+        fill: black;
+    }
+}
+@keyframes stroke-animate-green{
+    from{
+        fill: transparent;
+    }
+    to{
+        stroke-dashoffset: 0;
+        fill: #2B604A;
+    }
+}
+@keyframes fill{
+    from{
+        color: transparent;
+    }
+    to{
+        color: black;
+    }
+}
+
+

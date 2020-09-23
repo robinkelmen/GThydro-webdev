@@ -1,0 +1,64 @@
+#bottle{
+
+    position: absolute;
+    top: 10%;
+     left: 70%;
+     transform: translate(-50%, -50%);
+     transform: rotate(20deg);
+     z-index: 1;
+     
+     
+}
+#bottle{
+    animation: float 3s  infinite alternate;
+}
+
+.bottle-wave{
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    border-radius: 37%;
+    opacity: .6;
+   top:400px;
+    left: 500px;
+    z-index: 78;
+    background: linear-gradient(230deg, #5c3d6b, #214b99, #357175);
+    animation: wave 10s infinite linear ;
+}
+.bottle-wave:nth-child(2){
+   animation-delay: .2s;
+
+}
+.bottle-wave:nth-child(3){
+  animation-delay: .3s;
+
+
+}
+@keyframes wave{
+    0% {
+        background-position: 0% 50%;
+      }
+    
+      50% {
+        background-position: 100% 50%;
+      }
+    
+      100% {
+        background-position: 0% 50%;
+      }
+     from{
+        transform: rotate(0deg);
+     }
+     to{
+        transform: rotate(360deg);
+     }
+ }
+ @keyframes float{
+    from{
+       
+        transform: rotateX(0deg) rotateZ(30deg) translateX(0%) translateY(0%);
+    }
+    to{
+        transform: rotateX(20deg) rotateZ(40deg)  translateX(40%) translateY(10%);
+    }
+}
