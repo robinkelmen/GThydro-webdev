@@ -1,20 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../../Button';
+import SinglePagePDFViewer from "./components/pdf/single-page";
+import AllPagesPDFViewer from "./components/pdf/all-pages";
+import {gtdoc} from "./gthydrodoc.pdf"
 
 
 
 
 function howitworks() {
+
+ 
     return (
         <div>
-            <div className="container-butt">
-            <h3>How it Works</h3>
             
-                <Link to='/aboutpdf' className="blue"></Link>
-              
-               </div>
-            </div>
+      <hr />
+
+      <h4>All Pages</h4>
+      <div className="all-page-container">
+        <AllPagesPDFViewer pdf={gtdoc} />
+      </div>
+
+      <hr />
+    </div>
 
     )
 }

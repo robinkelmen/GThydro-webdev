@@ -1,10 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react';
+import { Document, Page } from "react-pdf";
 
-function pdfviewer() {
+
+function pdfviewer(props) {
+
+    const [numPages, setNumPages] = useState(1);
+
+    const onDocumentLoadSuccess = ( num ) => {
+        setNumPages(num);
+      }
+
+      const { pdf } = props;
     return (
         <div>
             <canvas>
-            <embed src=".../pdfjs-2.5.207-dist/web/viewer.html?file=gthydrodoc.pdf" />
+            <Document
+                file={pdf}
+                options={{ workerSrc: "/pdf.worker.js" }}
+                onLoadSuccess={onDocumentLoadSuccess}
+            >
+            {Array.from(new Array(numPages), (el, index) => (
+            <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+                ))}
+             </Document>
 
             </canvas>
         </div>

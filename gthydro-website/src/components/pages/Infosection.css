@@ -1,32 +1,72 @@
+@media screen and (min-width: 960px) {
+    body {
+       overflow-x: hidden;
+       
+    }
+    #intro-model{
+        display: flex;
+       padding-right: 5%;
+       transform: scale(1.5);
+        
+    }
+    #intro{
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color:black;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-family: 'Abel', sans-serif;
+        z-index: 78;
+        animation: fillWhite 2s ease forwards 2s;
+     }
+
+}
  .logo--home{
      position: absolute;
-     top: 40%;
+     top: 30%;
      left: 50%;
      transform: translate(-50%, -50%);
  }
 
- svg :nth-child(4){
-     animation:  rot 3s infinite;
+ #fins{
+     animation: rot 3s infinite linear;
  }
+
  @keyframes rot{
     from{
+        transform-origin: center center;
         transform: rotate(0deg);
      }
      to{
+        transform-origin: center center;
         transform: rotate(360deg);
      }
  }
  .tag-line{
      position: absolute;
-     top: 60%;
+     top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
      color: transparent;
      letter-spacing: 3px;
      text-transform: uppercase;
      font-family: 'Abel', sans-serif;
-     animation: fill 2s ease forwards .6s;
+     animation: fill 2.5s ease forwards .6s;
 
+ }
+ #intro{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+    z-index: 78;
+    animation: fillWhite 2s ease forwards 2s;
  }
  .wave-container{
     position: absolute;
@@ -53,11 +93,7 @@
     animation-delay: .2s;
 
 }
-.wave:nth-child(3){
-   animation-delay: .3s;
-  
 
-}
  @keyframes wave{
     0% {
         background-position: 0% 50%;
@@ -78,41 +114,6 @@
      }
  }
 
-
-
-
-
- #logo path:nth-child(1){
-    stroke-dasharray: 780px;
-    stroke-dashoffset: 780px;
-    animation: stroke-animate-green 2s ease-in-out forwards .3s;
-   
- }
- #logo path:nth-child(2){
-    stroke-dasharray: 800px;
-    stroke-dashoffset: 800px;
-    animation: stroke-animate 3s  ease-in-out forwards .4s;
-}
-
-
-@keyframes stroke-animate{
-    from{
-        fill: transparent;
-    }
-    to{
-        stroke-dashoffset: 0;
-        fill: black;
-    }
-}
-@keyframes stroke-animate-green{
-    from{
-        fill: transparent;
-    }
-    to{
-        stroke-dashoffset: 0;
-        fill: #2B604A;
-    }
-}
 @keyframes fill{
     from{
         color: transparent;
@@ -121,25 +122,32 @@
         color: black;
     }
 }
+@keyframes fillWhite{
+    from{
+        color: transparent;
+    }
+    to{
+        color: white;
+    }
+}
 
 .description{
     position: absolute;
     z-index: 90;
-    background: linear-gradient(230deg, #5c3d6b, #1d4288, #357175);
+    background: transparent;
     width: 100%;
-    top: 100%;
+    top: 110%;
     color:white;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 30px;
     font-family: 'Abel', sans-serif;
-    background-size: 200% 200%;
-    animation: grad 10s ease-in-out infinite;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
+
 @keyframes grad {
     0% {
       background-position: 0% 50%;
@@ -152,4 +160,15 @@
     100% {
       background-position: 0% 50%;
     }
+}
+#intro-statement{
+    display: inline-block;
+    padding-left: 7%;
+
+}
+#intro-model{
+    display: flexbox;
+   padding-right: 5%;
+   transform: scale(1.5);
+    
 }

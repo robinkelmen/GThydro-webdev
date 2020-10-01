@@ -45,6 +45,7 @@ function Contact() {
         <div className="bottle-wave"></div>
         
 </div>
+
 </div>
     )
 }

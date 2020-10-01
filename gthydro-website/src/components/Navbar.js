@@ -35,7 +35,7 @@ function Navbar() {
             <div className="navbar-container container">
 
                 <Link to="/" className="navbar-logo">
-                <img src={logo}  alt="Logo" className='logo' />
+                <div id="gt">GT</div>HYDRO
 
                 </Link>
                 <div className="menu-icon" onClick={handleClick }>

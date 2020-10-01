@@ -1,0 +1,32 @@
+
+
+.main-footer {
+    color: white;
+    background: linear-gradient(230deg, #5c3d6b, #1d4288, #357175);
+    position: relative;
+    width: 100%;
+    background-size: 200% 100%;
+    animation: grad 10s ease-in-out infinite;
+    font-family: 'Abel', sans-serif;
+    padding-top: 3em;
+    bottom: 0;
+    
+  }
+  li{
+    list-style-type: none;
+    letter-spacing: 2px;
+  }
+
+  @keyframes grad {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
