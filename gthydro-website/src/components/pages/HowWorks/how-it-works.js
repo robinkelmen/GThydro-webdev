@@ -4,6 +4,7 @@ import { Button } from '../../Button';
 import SinglePagePDFViewer from "./components/pdf/single-page";
 import AllPagesPDFViewer from "./components/pdf/all-pages";
 import {gtdoc} from "./gthydrodoc.pdf"
+import Pdfviewer from '../Pdfviewer';
 
 
 
@@ -18,7 +19,7 @@ function howitworks() {
 
       <h4>All Pages</h4>
       <div className="all-page-container">
-        <AllPagesPDFViewer pdf={gtdoc} />
+        <Pdfviewer pdf={gtdoc} />
       </div>
 
       <hr />

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Document, Page } from "react-pdf";
 
 
-function pdfviewer(props) {
+function Pdfviewer(props) {
 
     const [numPages, setNumPages] = useState(1);
 
@@ -29,4 +29,4 @@ function pdfviewer(props) {
     )
 }
 
-export default pdfviewer
+export default Pdfviewer;
