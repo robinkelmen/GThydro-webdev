@@ -1,10 +1,21 @@
- #logo{
+ .logo--home{
      position: absolute;
-     top: 50%;
+     top: 40%;
      left: 50%;
      transform: translate(-50%, -50%);
  }
 
+ svg :nth-child(4){
+     animation:  rot 3s infinite;
+ }
+ @keyframes rot{
+    from{
+        transform: rotate(0deg);
+     }
+     to{
+        transform: rotate(360deg);
+     }
+ }
  .tag-line{
      position: absolute;
      top: 60%;
@@ -26,23 +37,25 @@
  }
  .wave{
      position: absolute;
-     height: 2000px;
-     width: 2000px;
+     height: 1500px;
+     width: 1500px;
      border-radius: 37%;
      opacity: .6;
     top: -200px;
-     left: -100px;
+    left: -70px;
+    
+    
      background: linear-gradient(230deg, #5c3d6b, #214b99, #357175);
      animation: wave 10s infinite linear ;
  }
  .wave:nth-child(2){
-     left: -300px;
+   
     animation-delay: .2s;
 
 }
 .wave:nth-child(3){
    animation-delay: .3s;
-   left: -200px;
+  
 
 }
  @keyframes wave{
@@ -109,4 +122,34 @@
     }
 }
 
+.description{
+    position: absolute;
+    z-index: 90;
+    background: linear-gradient(230deg, #5c3d6b, #1d4288, #357175);
+    width: 100%;
+    top: 100%;
+    color:white;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 30px;
+    font-family: 'Abel', sans-serif;
+    background-size: 200% 200%;
+    animation: grad 10s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+@keyframes grad {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+}
