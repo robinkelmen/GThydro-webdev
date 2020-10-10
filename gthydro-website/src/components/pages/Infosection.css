@@ -227,10 +227,11 @@ body{
     padding-left: 5%;
     z-index: 7;
     margin: auto;
+    padding-bottom: 20px;
 
 }
 .buffer{
-    padding-top: 40vh;
+    padding-top: 50vh;
 }
 
 

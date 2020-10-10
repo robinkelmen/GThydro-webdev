@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { Model } from './Model';
 import "./Options.css";
 
@@ -6,8 +7,8 @@ function Options() {
     return (
         <div>
         <h1 style={{display:"block",  "padding-left": "30px" ,"margin-top":"30px", alignContent:"center", "text-transform": "uppercase"}}>Check Out Our Models</h1>
-        <p style={{"font-size":"20px", display:"block",  "padding-left": "30px" ,"margin-top":"30px", alignContent:"center"}}>GT Hydro Patented Technology can be customized to meet your renewable project needs.  Units can be stacked to achieve desired project kw goal.
-Tell us about your project.  Contact us now.
+        <p style={{ "font-family":"'Abel', sans-serif", "font-size":"20px", display:"block",  "padding-left": "30px" ,"margin-top":"30px", alignContent:"center"}}>GT Hydro Patented Technology can be customized to meet your renewable project needs.  Units can be stacked to achieve desired project kw goal.
+Tell us about your project. <Link className="quick-link"to="/contact"> Contact us now</Link>.
 </p>
         <div className="container-options">
            

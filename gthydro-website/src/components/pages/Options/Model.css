@@ -25,3 +25,14 @@ position: relative;
   
 
 }
+
+@keyframes rot{
+   from{
+       transform-origin: center center;
+       transform: rotate(0deg);
+    }
+    to{
+       transform-origin: center center;
+       transform: rotate(360deg);
+    }
+}

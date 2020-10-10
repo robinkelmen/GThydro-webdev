@@ -9,8 +9,7 @@ function Different() {
 <div className="more">
 <h1 id="distinction-statement">What Makes Us Different
 <ul>
-<li>Replaces conventional mechanical drive with</li>
-<li>Patented “Sealed Fluid Drive” …eliminating Torque Problem</li>
+<li>Replaces conventional mechanical drive with Patented “Sealed Fluid Drive” …eliminating Torque Problem</li>
 <li>Zero carbon footprint / Zero fuel costs</li>
 <li>Generates power 24/7</li>
 <li>Land not needed…utilizes abundance of rivers and oceans</li>
