@@ -1,0 +1,10 @@
+.container-options{
+  /*   background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%); */
+    background: transparent;
+    justify-content: space-around;
+    margin-top: 20vh;
+    display: flex;
+    margin-bottom: 50px;
+}
+

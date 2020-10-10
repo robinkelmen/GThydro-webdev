@@ -14,6 +14,7 @@
     background-size: 200% 100%;
     animation: grad 10s ease-in-out infinite;
     font-family: 'Abel', sans-serif;
+    margin: auto;
    
   }
   @keyframes grad {
@@ -35,6 +36,7 @@
     justify-content: space-between;
     height: 80px;
     z-index: 99;
+    margin: auto;
   }
   
   .container {

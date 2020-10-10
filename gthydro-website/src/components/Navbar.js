@@ -26,6 +26,9 @@ function Navbar() {
     useEffect(() => {
         showButton();
       }, []);
+      const toTop = () =>{
+        window.scrollTo(0,0);
+      }
     window.addEventListener('resize', showButton);
 
     return (
@@ -68,8 +71,8 @@ function Navbar() {
                         </Link>
                     </li>
                     <li  className="nav-item">
-                        <Link to='/investors' className="nav-links" onClick={closeMobileMenu}>
-                            Investors
+                        <Link to='/projects' className="nav-links" onClick={closeMobileMenu}>
+                            Projects
                         </Link>
                     </li>
                     <li className='nav-btn'>
@@ -85,7 +88,7 @@ function Navbar() {
                     <Button
                       buttonStyle='btn--outline'
                       buttonSize='btn--mobile'
-                      onClick={closeMobileMenu}>Contact Us</Button>
+                      onClick={toTop}>Contact Us</Button>
                   </Link>
                 )}
               </li>

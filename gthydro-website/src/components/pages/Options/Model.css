@@ -1,0 +1,27 @@
+
+
+.bkg--model{
+    background: transparent;
+}
+.bkg--outline{
+    border: 1px solid gray;
+}
+
+.model--small{
+transform: scale(.3);
+position: relative;
+}
+
+.model--medium{
+    transform: scale(.7);
+    display: inline-flex;
+
+
+}
+
+.model--large{
+    transform: scale(1.2);
+
+  
+
+}

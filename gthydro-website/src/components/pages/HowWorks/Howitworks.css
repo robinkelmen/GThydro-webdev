@@ -1,0 +1,57 @@
+#prompt{
+  position: relative;
+    display: flexbox;
+    color: black;
+ letter-spacing: 3px;
+ text-transform: uppercase;
+ line-height: 1.6;
+ font-family: 'Abel', sans-serif;
+ top: 10vh;
+     
+}
+
+#mydoc{
+  margin: 50px;
+    display : block;
+    background: linear-gradient(230deg, #5c3d6b, #1d4288, #357175);
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1.6;
+    font-family: 'Abel', sans-serif;
+    background-size: 200% 100%;
+    animation: grad 10s ease-in-out infinite;
+    max-width: 35vw;
+
+}
+.doclink{
+  text-decoration: none;
+}
+
+#question-prompt{
+  display: flex;
+  position: fixed;
+  align-self: center;
+  top: 85%;
+}
+
+
+
+@keyframes grad {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+

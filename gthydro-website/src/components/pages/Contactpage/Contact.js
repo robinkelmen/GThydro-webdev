@@ -9,11 +9,15 @@ function Contact() {
     const onSubmit = data =>{
         console.log(data);
     }
+    const toTop = () =>{
+        window.scrollTo(0,0);
+      }
 
     //window.addEventListener('resize', showButton);
     return (
-        <div>
-        <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+        <div onLoad={toTop}>
+           
+        <form className="contact-form" onSubmit={handleSubmit(onSubmit)} >
             
             <h3>Full Name *</h3>
             <input type="text" placeholder="Full Name" name="name" ref=

@@ -1,0 +1,117 @@
+
+#distinction-statement{
+    position: relative;
+    top: 10vh;
+    right: 5vw;
+    float: right;
+    max-width: 55vw;
+    color: white;
+
+}
+#distinction-model{
+    position: relative;
+    transform: scale(1);
+    opacity: .3;
+    float: left;
+    top: 15vh;
+    z-index: 1;
+
+}
+.more li{
+    font-size: 20px;
+    color: white;
+    opacity: 3;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    max-width: 90vw;
+    list-style-type: circle;
+}
+.more ul{
+    margin: auto;
+
+}
+
+.more{
+    margin: auto;
+    margin-top:5vh;
+    width: 100%;
+    background-color:transparent;
+    letter-spacing: 4px;
+    font-size: 30px;
+    font-family: 'Abel', sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#fishmodel, #orangefishmodel{
+    position: relative;
+    display: inline;
+    margin: auto;
+    z-index: 1;
+    bottom: 50vh;
+    animation: swim 15s infinite ease-in;
+    overflow: visible;
+}
+#orangefishmodel{
+    animation-delay: 4s;
+}
+.bubble, .bubble2, .bubble3{
+    animation: float 2s infinite ;
+}
+.bubble2{
+    animation-delay: .5s;
+}
+.bubble3{
+    animation-delay: 1s;
+}
+
+@keyframes float{
+    from{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-70%);
+        opacity: 0;
+    }
+}
+.main-fin{
+    animation: flip 1s infinite alternate;
+}
+@keyframes flip{
+    from{
+        transform-origin: center center;
+        transform: rotateY(0deg) rotateX(0deg);
+
+    }
+    to{
+        transform-origin: center center;
+        transform: rotateY(30deg) rotateX(-20deg);
+    }
+}
+
+.tail{
+    animation: wag 2s infinite alternate;
+}
+
+@keyframes wag{
+    from{
+        transform-origin: center center;
+        transform: rotateY(0deg);
+    }
+    to{
+        transform-origin: center center;
+        transform: rotateY(-20deg) scaleY(1.07);
+    }
+}
+
+@keyframes swim {
+   from{
+        transform: translateX(150vh);
+   }
+   to{
+    transform: translateX(-250vh);
+   }
+   
+    
+}

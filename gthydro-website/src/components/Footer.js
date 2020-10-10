@@ -2,10 +2,18 @@ import React from "react";
 import "./Footer.css";
 import {FiPhone, FiFacebook, FiTwitter, FiMail} from 'react-icons/fi'
 import {FaLocationArrow, FaGlobeAmericas, FaFax, FaInstagram} from 'react-icons/fa'
+import { Link } from "react-router-dom";
 
  
 
 function Footer() {
+
+
+  const scrollToContact = () => {
+   
+    window.scrollTo(0,0);
+    
+  }
   return (
 
     <div className="main-footer">
@@ -14,31 +22,33 @@ function Footer() {
         <div className="row">
           {/* Column1 */}
           <div className="col">
+          <ul className="list-unstyled">
             <h4>GT HYDRO, LLC </h4>
-            <ui className="list-unstyled">
+            
               <li><FiPhone/> (901) 229-1395</li>
               <li><FaFax/> (901) 323-0846</li>
               <li> <FaLocationArrow/> 3540 Summer Ave, Suite 200</li>
               <li> <FaGlobeAmericas/> Memphis, TN 38122</li>
-              </ui>
+              </ul>
           </div>
           {/* Column2 */}
           <div className="col">
+          <ul className="list-unstyled">
             <h4>Social Media</h4>
-            <ui className="list-unstyled">
+            
               <li> 
                 <FiFacebook/> Facebook</li>
               <li> <FaInstagram/> Instagram</li>
               <li> <FiTwitter/> Twitter</li>
               <li><FiMail/> Email</li>
-            </ui>
+            </ul>
           </div>
           {/* Column3 */}
           <div className="col">
+          <ul className="list-unstyled">
             <h4>Information</h4>
-            <ui className="list-unstyled">
-              <li>Contact Us</li>
-            </ui>
+              <li> <Link to="/contact" className="footer-contact" onClick={scrollToContact}>Contact Us</Link></li>
+            </ul>
           </div>
         </div>
         <hr />
