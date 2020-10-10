@@ -6,7 +6,6 @@ import "./Howitworks.css";
 import Fab from '@material-ui/core/Fab';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import { makeStyles } from "@material-ui/core/styles";
-import Different  from "../HowWorks/Howitworks";
 import Intro from '../Introstory/Intro';
 
 

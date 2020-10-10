@@ -4,7 +4,6 @@ import {FaBars, FaTimes} from 'react-icons/fa'
 import { Button } from './Button';
 import './Navbar.css';
 import {IconContext} from 'react-icons/lib'
-import logo from './logo.png';
 
 
 

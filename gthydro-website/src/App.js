@@ -15,9 +15,9 @@ import Options from './components/pages/Options/Options';
 
 function App() {
 
-  const toTop = () =>{
+  /* const toTop = () =>{
     window.scrollTo(0,0);
-  }
+  } */
   return (
     <>
     <div className="myApp">
