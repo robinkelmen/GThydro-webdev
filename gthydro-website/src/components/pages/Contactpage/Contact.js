@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useRef,useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import "./Contact.css";
 import {useForm} from 'react-hook-form';
 
 function Contact() {
+    const contactRef = useRef(null);
+    const [isLoaded, setIsLoaded] = useState(false);
     const {register, handleSubmit, errors} = useForm();
 
     const onSubmit = data =>{
@@ -12,10 +14,18 @@ function Contact() {
     const toTop = () =>{
         window.scrollTo(0,0);
       }
-
-    //window.addEventListener('resize', showButton);
+      const scrollToInfo = () => {
+        if(isLoaded){
+        contactRef.current.scrollIntoView({ behavior: "smooth" })
+        clearTimeout(scroll);
+        }
+      }
+      const scroll = setTimeout(()=> {
+        setIsLoaded(true);
+      }, 2000);
+      useEffect(scrollToInfo,[isLoaded]);
     return (
-        <div onLoad={toTop}>
+        <div ref={contactRef} onLoad={scroll}>
            
         <form className="contact-form" onSubmit={handleSubmit(onSubmit)} >
             
