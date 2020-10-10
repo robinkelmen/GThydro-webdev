@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 
 
 const SIZES = ["model--large", 'model--medium', 'model--small'];
-export const Model = ({ Size, dimensions, description, children}) => {
+export const Model = ({ Size, dimensions, description, homes, children}) => {
 
     const checkModelSize = SIZES.includes(Size) ? Size : SIZES[0];
     const classes = useStyles();
@@ -62,6 +62,9 @@ export const Model = ({ Size, dimensions, description, children}) => {
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {description}
+          </Typography>
+          <Typography variant="body2"  component="h3">
+            {homes}
           </Typography>
         </CardContent>
       </CardActionArea>
