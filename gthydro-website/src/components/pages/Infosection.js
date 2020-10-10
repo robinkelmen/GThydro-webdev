@@ -20,7 +20,7 @@ function Infosection() {
 
       const scroll = setTimeout(()=> {
         setIsLoaded(true);
-      }, 4000);
+      }, 6000);
 
      useEffect(scrollToInfo,[isLoaded]);
     return (
