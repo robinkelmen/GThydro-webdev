@@ -22,7 +22,7 @@ export const Model = ({ Size, name, dimensions, description, homes, children}) =
 
     const checkModelSize = SIZES.includes(Size) ? Size : SIZES[0];
     const classes = useStyles();
-    const gtdocPage = `${gtdoc}/#page=19`;
+    const gtdocPage = `${gtdoc}#page=19`;
     return (
         <>
 
