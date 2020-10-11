@@ -1,5 +1,4 @@
-import React, {useRef,useState, useEffect} from 'react'
-import {Link} from 'react-router-dom';
+import React, {useRef,useState, useEffect} from 'react';
 import "./Contact.css";
 import {useForm} from 'react-hook-form';
 
@@ -11,9 +10,9 @@ function Contact() {
     const onSubmit = data =>{
         console.log(data);
     }
-    const toTop = () =>{
+    /* const toTop = () =>{
         window.scrollTo(0,0);
-      }
+      } */
       const scrollToInfo = () => {
         if(isLoaded){
         contactRef.current.scrollIntoView({ behavior: "smooth" })
