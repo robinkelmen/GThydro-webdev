@@ -14,20 +14,24 @@ Tell us about your project. <Link className="quick-link"to="/contact"> Contact u
            
             <Model
              Size="model--small" 
-             dimensions="30ft"
+             name="GT30"
+             dimensions="30' Diameter Wheel"
+
             description="Generates 147kw/1,234,033kw Annually"
             homes="Enough energy for 100 homes annually"
             ></Model>
             <Model  
             Size="model--medium" 
-            dimensions="60ft" 
+            name="GT60"
+            dimensions="60' Diameter Wheel"
             description="Generates 588kw/4,936,134kw Annually"
             homes="Enough energy for 430 homes annually"
             >
 
             </Model>
             <Model  Size="model--large" dimensions="50ft"
-            dimensions="250ft" 
+            name="GT250"
+            dimensions="250' Diameter Wheel"
             description="Generates 10,202kw/85,696,763kw Annually"
             homes="Enough energy for 7,500 homes annually"
             ></Model>

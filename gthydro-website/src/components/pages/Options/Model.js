@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 
 
 const SIZES = ["model--large", 'model--medium', 'model--small'];
-export const Model = ({ Size, dimensions, description, homes, children}) => {
+export const Model = ({ Size, name, dimensions, description, homes, children}) => {
 
     const checkModelSize = SIZES.includes(Size) ? Size : SIZES[0];
     const classes = useStyles();
@@ -57,7 +57,10 @@ export const Model = ({ Size, dimensions, description, homes, children}) => {
     </div> 
         </CardMedia>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+        <Typography gutterBottom variant="h5" component="h1">
+            {name}
+          </Typography>
+          <Typography  color="textSecondary" component="h4">
             {dimensions}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">

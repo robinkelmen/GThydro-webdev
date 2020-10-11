@@ -233,7 +233,15 @@ body{
 .buffer{
     padding-top: 50vh;
 }
-
+#orangefish{
+    position: relative;
+    display: inline;
+    margin: auto;
+    z-index: 1;
+    bottom: 45vh;
+    animation: swim 15s infinite ease-in;
+    overflow: visible;
+}
 
 
 

@@ -44,6 +44,7 @@ function Infosection() {
     
     <h1 id="intro-statement">What We Are All About</h1>
 
+
     <svg id="intro-model" width="540" height="519" viewBox="0 0 540 519" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="262.306" cy="261.306" r="47" transform="rotate(49 262.306 261.306)" fill="#A5A5A5"/>
     <g id="fins">
