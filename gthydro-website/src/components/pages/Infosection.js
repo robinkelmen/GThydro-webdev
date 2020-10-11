@@ -74,7 +74,9 @@ function Infosection() {
 </svg>
 
 <p>
-GT Hydrokinetic LLC is a young company with a patented hydrokinetic <strong>sealed fluid drive technology</strong> that harnesses the natural energy of flowing water to generate utility scale renewable energy. The unit turns at the speed of the water current results in the unit being environmentally benign. The Sealed Fluid moves across the turbine <strong>100x</strong> faster, thus creating commercial grade power.</p>
+GT Hydrokinetic LLC is a young company with a patented hydrokinetic <strong>sealed fluid drive technology</strong> that harnesses the natural energy of flowing water to generate utility scale renewable energy. 
+The unit turns at the speed of the water current, thus making it environmentally benign. 
+The Sealed Fluid moves internally across the turbine <strong>100x</strong> faster, thus creating commercial grade power.</p>
 </div>
 <div className="buffer">
     
