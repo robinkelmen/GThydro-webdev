@@ -11,11 +11,11 @@ function Intro() {
             
             <div className="intro-content">
             <div className="info-wrapper">
-                <div className="images-container">
+    
                 <img id="bad-scene" src={bad} alt="bad scene"/>
+                
+              
                 <img id="good-scene" src={good} alt="good scene"/>
-                </div>
-
 
 <div className="intro_paragragh">
     

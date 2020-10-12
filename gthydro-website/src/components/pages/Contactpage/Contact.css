@@ -19,6 +19,7 @@
     height: 140%;
     padding: 20px;
     margin: 20px;
+   
 
     
 }
@@ -32,10 +33,12 @@
     letter-spacing: 3px;
     font-size: 10px;
     margin: 0;
+
     
 }
 #message{
     height: 400%;
+
 }
 
 #bottle{
@@ -68,6 +71,7 @@
     background: linear-gradient(230deg, #5c3d6b, #214b99, #357175);
     animation: wave 10s infinite linear ;
     z-index: 34;
+    max-width: 100%;
 }
 .bottle-wave:nth-child(2){
    animation-delay: .2s;
@@ -119,6 +123,7 @@
     font-family: 'Abel', sans-serif;
     font-size: 50px;
     animation: fill 2s ease forwards .6s;
+    max-width: 100%;
 }
 @keyframes fill{
     from{
@@ -135,8 +140,45 @@
       text-shadow: #5c3d6b;
       letter-spacing: 3px;
       font-family: 'Abel', sans-serif;
-      font-size: 20px;
+      font-size: 10px;
       animation: fill 2s ease forwards .6s;
+      max-width: 100%;
 
     }
+    .contact-form{
+        position: absolute ;
+        top: 20%;
+        left: 10%;
+        max-width: 100%;
+        
+    }
+    .contact-form input{
+        display: flex;
+        border: 1px solid #214b99;
+        width: 160%;
+        height: 140%;
+        padding: 20px;
+        margin: 20px;
+        max-width: 100%;
+    
+        
+    }
+    .contact-form h3{
+        display: flex;
+        padding: 0;
+        position: relative;
+        text-transform: uppercase;
+        font-family: 'Abel', sans-serif;
+        left: 10%;
+        letter-spacing: 3px;
+        font-size: 10px;
+        margin: 0;
+        max-width: 100%;
+        
+    }
+    #message{
+        height: 400%;
+        max-width: 100%;
+    }
+    
 }

@@ -6,9 +6,23 @@
     margin-top: 20vh;
     display: flex;
     margin-bottom: 50px;
+    max-width: 100%;
 }
 .quick-link{
   color: blueviolet;
   text-decoration: none;
   padding: 2px;
+}
+
+@media screen and (max-width: 960px) {
+
+  .container-options{
+    max-width: 100%;
+    display: block;
+    padding: 10px;
+
+  }
+
+
+
 }
