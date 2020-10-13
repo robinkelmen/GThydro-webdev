@@ -250,5 +250,93 @@ body{
     overflow: visible;
 }
 
+@media screen and (max-width: 960px){
+    body{
+        overflow-x: hidden;
+    }
+    #intro-model{
+        display: flexbox;
+       transform: scale(1);
+       margin: auto;
+       position: relative;
+        
+    }
+    .description{
+        position: relative;
+        background: transparent;
+        width: 100%;
+        top: 25vh;
+        color:white;
+        letter-spacing: 2px;
+        font-size: 30px;
+        font-family: 'Abel', sans-serif;
+        display: flex;
+        margin: auto;
+        
+    
+    }
+    .description h1{
+        padding-bottom: 10px;
+        padding-left: 15px;
+        display: block;
+    }
+    .description p{
+    
+        position: absolute;
+        padding-top: 20px;
+        top: 60vh;
+        text-transform: none;
+        line-height: 1.6;
+        letter-spacing: 2px;
+        font-size: 15px;
+        font-family: 'Abel', sans-serif;
+        display: block;
+        margin: auto;
+        justify-content: center;
+    }
+    .wave-container{
+        position: absolute;
+        bottom: 0;
+       max-width: 70%;
+        top: 70;
+    
+     }
+     .wave{
+         position: absolute;
+         height: 600px;
+         width: 600px;
+         border-radius: 37%;
+         opacity: .6;
+        top: -200px;
+         background: linear-gradient(230deg, #5c3d6b, #214b99, #357175);
+       
+}
+#intro-statement{
+    display: flex;
+    padding-left: 5%;
+    z-index: 7;
+    margin: auto;
+    padding-bottom: 20px;
+    font-size: 35px;
+    max-width: 100%;
 
 
+}
+#intro{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+    animation: fillWhite 2s ease forwards 2s;
+    max-width: 100%;
+ 
+}
+
+.main-container{
+  
+    background: linear-gradient(230deg, #5c3d6b, #214b99, #357175);
+    animation: grad 10s infinite linear ;
+}
+}

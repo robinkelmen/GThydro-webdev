@@ -60,3 +60,62 @@
     color:black;
     background-color: white;
   }
+
+  @media screen and (max-width: 960px){
+
+
+.main-footer {
+  color: white;
+  background: linear-gradient(230deg, #5c3d6b, #1d4288, #357175);
+  position: relative;
+ max-width: 100%;
+  background-size: 200% 100%;
+  animation: grad 10s ease-in-out infinite;
+  font-family: 'Abel', sans-serif;
+  padding-top: 3em;
+  line-height: 1.6 
+  
+}
+li{
+  list-style-type: none;
+
+}
+.col {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 10px;
+}
+
+@keyframes grad {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.footer-contact {
+  color:white;
+  text-decoration: none;
+  border: 1px  solid white;
+  font-size: 15px;
+  letter-spacing: 3px;
+
+}
+.footer-contact:hover{
+  color:black;
+  background-color: white;
+}
+  }
