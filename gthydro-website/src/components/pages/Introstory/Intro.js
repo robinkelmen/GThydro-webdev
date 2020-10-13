@@ -16,6 +16,7 @@ function Intro() {
                 
               
                 <img id="good-scene" src={good} alt="good scene"/>
+                </div>
 
 <div className="intro_paragragh">
     
@@ -37,7 +38,7 @@ Not visible to the human eye.  You have to go below the surface to see…
 </p><p></p>
 
 
-</div>
+
 
 </div> 
              </div>

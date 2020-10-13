@@ -6,8 +6,8 @@ import "./Options.css";
 function Options() {
     return (
         <div>
-        <h1 style={{ color:"white", display:"block",  "paddingLeft": "30px" ,"marginTop":"30px", alignContent:"center", "textTransform": "uppercase"}}>Check Out Our Models</h1>
-        <p style={{ color:"white", "fontFamily":"'Abel', sans-serif", "fontSize":"20px", display:"block",  "paddingLeft": "30px" ,"marginTop":"30px", alignContent:"center"}}>GT Hydro Patented Technology can be customized to meet your renewable project needs.  Units can be stacked to achieve desired project kw goal.
+        <h1 id="model-header" style={{  display:"block",  "paddingLeft": "30px" ,"marginTop":"30px", alignContent:"center", "textTransform": "uppercase"}}>Check Out Our Models</h1>
+        <p id="model-intro" style={{  "fontFamily":"'Abel', sans-serif", "fontSize":"20px", display:"block",  "paddingLeft": "30px" ,"marginTop":"30px", alignContent:"center"}}>GT Hydro Patented Technology can be customized to meet your renewable project needs.  Units can be stacked to achieve desired project kw goal.
 Tell us about your project. <Link className="quick-link"to="/contact"> Contact us now</Link>.
 </p>
         <div className="container-options">
