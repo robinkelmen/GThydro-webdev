@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import "./Model.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -10,6 +10,8 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from 'react-router-dom';
 import gtdoc from "../HowWorks/GTDOC.pdf"
+import 'reactjs-popup/dist/index.css';
+import Popup from 'reactjs-popup';
 const useStyles = makeStyles({
   root: {
     maxWidth: 345
@@ -19,13 +21,20 @@ const useStyles = makeStyles({
 
 const SIZES = ["model--large", 'model--medium', 'model--small'];
 export const Model = ({ Size, name, dimensions, description, homes, children}) => {
-
+  const textAreaRef = useRef(null);
     const checkModelSize = SIZES.includes(Size) ? Size : SIZES[0];
     const classes = useStyles();
     const gtdocPage = `${gtdoc}#page=19`;
+
+    const copyToClipboard = (e) => {
+      
+      navigator.clipboard.writeText(window.location.toString())
+      
+    };
+  
     return (
         <>
-
+       
         <Card className={classes.root}>
       <CardActionArea>
         <CardMedia >
@@ -72,9 +81,14 @@ export const Model = ({ Size, name, dimensions, description, homes, children}) =
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
+      <Popup trigger= {<Button size="small" color="primary" position="center">
+        Share
+        </Button>}>
+        <div class="link">
+    <div className="pen-url" ref={textAreaRef} value="http://gthydrokinetic.com">http://gthydrokinetic.com</div>
+    <button onClick={copyToClipboard} className="copy-link-button">Copy Link</button>
+  </div>
+        </Popup>
         <Button size="small" color="primary"> 
         <Link className="doclink" to={gtdocPage} target="_blank">
           Learn More

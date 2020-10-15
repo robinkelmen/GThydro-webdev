@@ -1,34 +1,19 @@
+import { Button } from '@material-ui/core';
 import React from 'react';
-import ".Share.css";
+import "./Share.css";
+import 'reactjs-popup/dist/index.css';
 
-function share() {
-    const shareButton = document.querySelector('.share-button');
-const shareDialog = document.querySelector('.share-dialog');
-const closeButton = document.querySelector('.close-button');
 
-shareButton.addEventListener('click', event => {
-  if (navigator.share) { 
-   navigator.share({
-      title: 'WebShare API Demo',
-      url: 'http://gthydokinetic.com'
-    }).then(() => {
-      console.log('Thanks for sharing!');
-    })
-    .catch(console.error);
-    } else {
-        shareDialog.classList.add('is-open');
-    }
-});
 
-closeButton.addEventListener('click', event => {
-  shareDialog.classList.remove('is-open');
-});
+function Share() {
+
     return (
+    
         <div>
             <div class="share-dialog">
   <header>
-    <h3 class="dialog-title">Share this pen</h3>
-    <button class="close-button"><svg><use href="#close"></use></svg></button>
+    <h3 class="dialog-title">Share this Site</h3>
+    <Button className="close-button"><svg><use href="#close"></use></svg></Button>
   </header>
   <div class="targets">
     <a class="button">
@@ -60,17 +45,10 @@ closeButton.addEventListener('click', event => {
     </a>
   </div>
   <div class="link">
-    <div class="pen-url">https://codepen.io/ayoisaiah/pen/YbNazJ</div>
+    <div class="pen-url">http://gthydrokinetic.com</div>
     <button class="copy-link">Copy Link</button>
   </div>
 </div>
-
-<button class="share-button" type="button" title="Share this article">
-  <svg>
-    <use href="#share-icon"></use>
-  </svg>
-  <span>Share</span>
-</button>
 
 <svg class="hidden">
   <defs>
