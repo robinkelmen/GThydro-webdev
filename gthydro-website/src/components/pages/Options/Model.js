@@ -85,6 +85,7 @@ export const Model = ({ Size, name, dimensions, description, homes, children}) =
         Share
         </Button>}>
         <div class="link">
+          <h2>Share this Page?</h2>
     <div className="pen-url" ref={textAreaRef} value="http://gthydrokinetic.com">http://gthydrokinetic.com</div>
     <button onClick={copyToClipboard} className="copy-link-button">Copy Link</button>
   </div>
