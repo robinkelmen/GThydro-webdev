@@ -37,12 +37,13 @@ position: relative;
     }
 }
 .link {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     border-radius: 4px;
     background-color: #eee;
+    border: 1px solid black;
   }
   
   .pen-url {
@@ -50,7 +51,7 @@ position: relative;
     white-space: nowrap;
   }
   .copy-link-button{
-    display: inline-flex;
+    display: inline;
     align-items: center;
     justify-content: center;
     height: auto;
@@ -66,4 +67,5 @@ position: relative;
     text-decoration: none;
     white-space: nowrap;
     cursor: pointer;
+    border:1px #777 solid;
   }

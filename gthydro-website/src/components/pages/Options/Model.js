@@ -1,4 +1,4 @@
-import React, {useRef} from 'react'
+import React, {useState} from 'react'
 import "./Model.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -10,27 +10,51 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from 'react-router-dom';
 import gtdoc from "../HowWorks/GTDOC.pdf"
-import 'reactjs-popup/dist/index.css';
-import Popup from 'reactjs-popup';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 345
   }
 });
+const useStylesModal = makeStyles((theme) => ({
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+  },
+}));
+
 
 
 const SIZES = ["model--large", 'model--medium', 'model--small'];
 export const Model = ({ Size, name, dimensions, description, homes, children}) => {
-  const textAreaRef = useRef(null);
+  
     const checkModelSize = SIZES.includes(Size) ? Size : SIZES[0];
     const classes = useStyles();
     const gtdocPage = `${gtdoc}#page=19`;
-
-    const copyToClipboard = (e) => {
-      
-      navigator.clipboard.writeText(window.location.toString())
-      
+    const classesModal = useStylesModal();
+    const [open, setOpen] = React.useState(false);
+  
+    const handleOpen = () => {
+      setOpen(true);
     };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
+    const copyToClipboard = e => {
+      navigator.clipboard.writeText(window.location.toString())
+    }
   
     return (
         <>
@@ -81,15 +105,32 @@ export const Model = ({ Size, name, dimensions, description, homes, children}) =
         </CardContent>
       </CardActionArea>
       <CardActions>
-      <Popup trigger= {<Button size="small" color="primary" position="center">
+      <Button size="small" color="primary" position="center" onClick={handleOpen}>
         Share
-        </Button>}>
-        <div class="link">
-          <h2>Share this Page?</h2>
-    <div className="pen-url" ref={textAreaRef} value="http://gthydrokinetic.com">http://gthydrokinetic.com</div>
-    <button onClick={copyToClipboard} className="copy-link-button">Copy Link</button>
-  </div>
-        </Popup>
+        </Button>
+        <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classesModal.modal}
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}>
+        <Fade in={open}>
+          <div className={classesModal.paper}>
+            <h2 id="transition-modal-title">Share This Page</h2>
+            <div className="link">
+            <p className="pen-url">http://gthydrokinetic.com</p>
+            </div>
+            <Button className="copy-link-button" onClick={copyToClipboard}>Copy Link</Button>
+            
+          </div>
+        </Fade>
+      </Modal>
+    
         <Button size="small" color="primary"> 
         <Link className="doclink" to={gtdocPage} target="_blank">
           Learn More

@@ -10,6 +10,7 @@ import Infosection from './components/pages/Infosection';
 import Contactfab from "./components/Contactfab";
 import Intro from "./components/pages/Introstory/Intro"
 import Options from './components/pages/Options/Options';
+import News from './components/pages/News';
 
 
 
@@ -32,7 +33,7 @@ function App() {
        <Route path="/contact" exact component={Contact}/>
        <Route path='/howitworks' exact component={Howitworks}/>
        <Route path="/projects" />
-       <Route path="/news" exact component={Intro}/>
+       <Route path="/news" exact component={News}/>
        <Route path="/whoweare" exact component={Options}/>
 
      </Switch>
